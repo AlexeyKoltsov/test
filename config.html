@@ -1,7 +1,11 @@
 <html>
    <head>
-      <script src="https://unpkg.com/@microsoft/teams-js@1.4.1/dist/MicrosoftTeams.min.js" />
-      <script type="text/javascript">  
+      <link href="https://unpkg.com/@microsoft/teams-js@1.4.1/dist/MicrosoftTeams.min.js" integrity="sha384-wHgBQlRj8iDw76cpan9ViEoOBiIJid4ACaE6vA2gUJPtn15GJnMmUGS+fLxKBWeI" crossorigin="anonymous">
+     
+   </head>
+<body>
+  Test
+    <script type="text/javascript">  
       microsoftTeams.initialize();
       microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
 
@@ -17,8 +21,5 @@
 
       microsoftTeams.settings.setValidityState(true);
 </script>
-   </head>
-<body>
-  Test
 </body>
 </html>
