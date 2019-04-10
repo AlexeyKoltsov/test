@@ -1,0 +1,33 @@
+<html>
+<body>
+<form>
+  <input type="radio" name="maptype" value="bing" onclick="onClick()"> Bing Maps<br>
+  <input type="radio" name="maptype" value="google" onclick="onClick()"> Google Maps
+</form>
+
+<script src="https://unpkg.com/@microsoft/teams-js@1.4.1/dist/MicrosoftTeams.min.js" integrity="sha384-wHgBQlRj8iDw76cpan9ViEoOBiIJid4ACaE6vA2gUJPtn15GJnMmUGS+fLxKBWeI" crossorigin="anonymous"></script>
+
+<script type="text/javascript">  
+
+microsoftTeams.initialize();
+microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
+
+   microsoftTeams.settings.setSettings({
+     entityId: "bing",
+     contentUrl: "https://sway.office.com/lhDXeFpS4Ax03pzG?ref=Link",
+     suggestedDisplayName: "VIAcode Policy",
+     websiteUrl: "https://sway.office.com/lhDXeFpS4Ax03pzG?ref=Link",
+     removeUrl: "https://teams-get-started-sample.azurewebsites.net/tabremove.html",
+  });
+    
+
+    saveEvent.notifySuccess();
+});
+
+function onClick() {
+    microsoftTeams.settings.setValidityState(true);
+}
+
+</script>
+</body>
+</html>
