@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html>
+  <head></head>
 <body>
-  Test
-  <script src="https://unpkg.com/@microsoft/teams-js@1.4.1/dist/MicrosoftTeams.min.js" integrity="sha384-wHgBQlRj8iDw76cpan9ViEoOBiIJid4ACaE6vA2gUJPtn15GJnMmUGS+fLxKBWeI" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">  
+  <H1>VIAcode Teams usage policy</H1>
+  <button onclick="save()">Continue</button>
+  <script src="https://statics.teams.microsoft.com/sdk/v0.4/js/MicrosoftTeams.min.js"></script>
+  function save() {
+   <script type="text/javascript">  
       microsoftTeams.initialize();
       microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
 
@@ -12,12 +15,14 @@
         contentUrl: "https://sway.office.com/lhDXeFpS4Ax03pzG",
         suggestedDisplayName: "VIAcode Policy",
         websiteUrl: "https://sway.office.com/lhDXeFpS4Ax03pzG",
-        removeUrl: "https://teams-get-started-sample.azurewebsites.net/tabremove.html",
+        removeUrl: "https://chokolakula.github.io/test/remove.html",
      });
        saveEvent.notifySuccess();
    });
 
       microsoftTeams.settings.setValidityState(true);
+     }
+    
 </script>
 </body>
 </html>
